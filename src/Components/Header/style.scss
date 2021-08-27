@@ -1,0 +1,140 @@
+@import "../../Assets/Sass/Mixins/breakpoint.scss";
+.header-container {
+    margin-top: 25px;
+    .title-menu {
+        color: rgba(0, 0, 0, 1);
+        font-weight: 500;
+        @include bp(md) {
+            font-size: 24px;
+        }
+        font-size: 20px;
+    }
+}
+
+.header-component {
+    justify-content: space-between;
+    .li-1 {
+        @include bp(md) {
+            border-right: 1px solid #263b80;
+        }
+        font-size: 12px;
+        border-right: 0;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: rgba(19, 81, 180, 1);
+        }
+    }
+    .li-2 {
+        @include bp(md) {
+            padding-left: 30px;
+            border-right: 1px solid #263b80;
+        }
+        padding-left: 0px;
+        font-size: 12px;
+        border-right: 0;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: rgba(19, 81, 180, 1);
+        }
+    }
+    .li-3 {
+        font-size: 12px;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: rgba(19, 81, 180, 1);
+        }
+    }
+}
+
+.div-img-logo {
+    background-image: url("../../Assets/Imgs/Logo-ANA-DT.png");
+    height: 42px;
+    width: 87px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@include bp(md) {
+    .div-img-logo {
+        background-image: url("../../Assets/Imgs/Logo-ANA-DT.png");
+        height: 58px;
+        width: 120px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.hamburguer {
+    width: 20px;
+    border-top: 3px solid;
+    display: block;
+    color: rgba(19, 81, 180, 1);
+}
+.hamburguer::after,
+.hamburguer::before {
+    border: 1.5px solid;
+    width: 20px;
+    background: currentColor;
+    content: "";
+    display: block;
+    margin-top: 3px;
+    transition: 0.3s;
+    position: relative;
+}
+.ativado {
+    .hamburguer {
+        border-top-color: transparent;
+    }
+}
+.ativado {
+    .hamburguer::before {
+        transform: rotate(135deg);
+    }
+}
+.ativado {
+    .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -8px;
+        margin-top: 5px;
+    }
+}
+
+.menu-box1 {
+    background-color: #263b80;
+    border: 2px solid;
+    border-image-source: linear-gradient(169.15deg, rgba(255, 255, 255, 0.4) 0%, rgba(238, 237, 237, 0.2) 96.79%);
+    .bg-menu {
+        background-color: rgba(3, 22, 123, 1);
+    }
+    .link-menu {
+        color: rgba(255, 255, 255, 1);
+        @include bp(md) {
+            font-size: 14px;
+        }
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .title-rede {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 1);
+    }
+}
+.menu-box2 {
+    .color-faq-azul {
+        color: rgba(3, 22, 123, 1);
+    }
+    .link-menu-r {
+        @include bp(md) {
+            font-size: 14px;
+        }
+
+        font-size: 13px;
+        font-weight: 400;
+        color: rgba(3, 22, 123, 1);
+    }
+}

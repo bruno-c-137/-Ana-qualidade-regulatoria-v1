@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./variables.scss";
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../Fonts/Raleway-Regular.ttf");
+}
+
+html,
+body {
+    margin: 0;
+    font-family: Raleway;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    color: rgba(var(--neutral), 1);
+}
+#root {
+    @apply flex flex-col w-screen h-screen max-w-full overflow-x-hidden;
+    > .main {
+        @apply flex-1;
+    }
+}
+
+button,
+select,
+option {
+    font-family: Raleway;
+}
+.display-flex {
+    display: flex;
+}
+.list-style-none {
+    list-style: none;
+}
